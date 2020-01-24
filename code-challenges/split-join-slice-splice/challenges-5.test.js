@@ -134,6 +134,11 @@ For example:
 
 const removeEvenValues = (arr) => {
   // Solution code here...
+  let holder = [arr];
+  arr.forEach(i % 2 === 1) => {
+    console.log(arr);
+    
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -215,7 +220,7 @@ xdescribe('Testing challenge 1', () => {
   });
 });
 
-describe('Testing challenge 2', () => {
+xdescribe('Testing challenge 2', () => {
   test('It should return an array of individual letters', () => {
     expect(wordsToCharList('Gregor')).toStrictEqual(['G', 'r', 'e', 'g', 'o', 'r']);
     expect(wordsToCharList('Gregor').length).toStrictEqual(6);
