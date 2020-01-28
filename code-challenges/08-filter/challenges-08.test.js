@@ -27,6 +27,14 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 
 const filterStringsWithVowels = (arr) => {
   // Solution code here...
+  // Convert any string value to lower case
+  // use .filter with regex to target any comparison value matching a,e,i,o,u
+  // if a vowel exists in the string, push the string to a new array,
+  //return the new array
+  let vowels = [a, e, i, o, u];
+  for (let i = 0; i < vowels.length; i++) {
+      let results2 = arr.filter(text ())
+  }
 };
 
 
@@ -40,6 +48,12 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 
 const notInFirstArray = (forbiddenValues, arr) => {
   // Solution code here...
+  // forEach over second array, comparing to each value in the first array; 
+  // if each arr item does not strictly equal one of the items in forbiddenValues, then filter it into a new array.
+  // return the new array.
+  
+  // forEach(arr => forbiddenValues
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -182,7 +196,7 @@ describe('Testing challenge 1', () => {
   });
 });
 
-xdescribe('Testing challenge 2', () => {
+describe('Testing challenge 2', () => {
   test('It should return an array containing only words that have vowels', () => {
     expect(filterStringsWithVowels(['gregor','hound','xyz'])).toStrictEqual(['gregor', 'hound']);
     expect(filterStringsWithVowels(['gregor','hound','xyz']).length).toStrictEqual(2);
