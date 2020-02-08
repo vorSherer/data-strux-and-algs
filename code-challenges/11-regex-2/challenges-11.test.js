@@ -10,6 +10,8 @@ If the PIN is four numerical digits long, return true. Otherwise, return false.
 
 const validatePin = (pin) => {
   // Solution code here...
+  const test1 = /\d[0-9]{4}/g;
+  return pin.test(test1);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -30,6 +32,8 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 
 const validateEmail = (email) => {
   // Solution code here...
+  const test2 = /^([A-Za-z0-9]+[._%+-]+)?[A-Za-z0-9]+@[A-Za-z0-9.-]+\.([A-Za-z]{2,8})(\.[a-z]{2,8})?$/g;
+  return email.match(test2);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -55,6 +59,8 @@ Return either true or false.
 
 const validatePhoneNumber = (phoneNumber) => {
   // Solution code here...
+  const telFormat = /^\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$/g;
+  return phoneNumber.match(telFormat);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -68,6 +74,11 @@ findTagNames(['<div><h1>Hello, world!</h1></div>', '<p>Welcome to my site</p>'])
 
 const findTagNames = elements => {
   // Solution code here...
+  elements = [];
+  const test4 = /\s?\/[a-z0-9]{1,10}>/g;
+  let catcher = findTagNames.match(test4)
+  elements.push(catcher);
+  return elements;
 };
 
 /* ------------------------------------------------------------------------------------------------
