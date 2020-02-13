@@ -148,27 +148,27 @@ const sortPeopleBetter = (arr) => {
     if (a.lastName === b.lastName && a.firstName === b.firstName) {
       if(a.age > b.age) {
         return 1;
-    }
-    if (a.age < b.age) {
-      return -1;
-    }
-    return 0;
-  } else if(a.lastName === b.lastName) {
+      }
+      if (a.age < b.age) {
+        return -1;
+      }
+      return 0;
+    } else if(a.lastName === b.lastName) {
       if (a.firstName > b.firstName) {
         return 1;
+      }
+      if (a.firstName < b.firstName) {
+        return -1;
+      }
+      return 0;
+    } else if(a.lastName > b.lastName) {
+      return 1;
     }
-    if (a.firstName < b.firstName) {
+    if (a.lastName > b.lastName) {
       return -1;
     }
     return 0;
-  } else if(a.lastName > b.lastName) {
-      return 1;
-  }
-  if (a.lastName > b.lastName) {
-    return -1;
-  }
-  return 0;
-  }
+  });
   return arr;
 };
 
